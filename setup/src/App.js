@@ -15,7 +15,24 @@ function App() {
   const[person,setPerson] = useState(null);
   const[title,setTitle]= useState('name');
   const[value,setValue]= useState('random person');
-  return <h2>random user starter</h2>
+
+
+  const handleValue = (e)=>{
+
+  }
+
+  return (
+  <main>
+  <div className='block bcg-black'></div>
+  <div className="block">
+    <div className="container">
+      <img src={(person && person.image) || defaultImage} alt="random user" className='user-img' />
+      <p className='user-title'>my {title} is</p>
+      <p className='user-value'>{value}</p>
+    </div>
+  </div>
+  </main>
+  )
 }
 
 export default App
